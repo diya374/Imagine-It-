@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <title>ImagineIt Fashion Library — Admin</title>
+
+  <link rel="stylesheet" href="styles.css">
+
+  <!-- Android/PWA -->
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Supabase -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+
+<body>
+
+  <div id="app"></div>
+
+  <script src="config.js"></script>
+  <script src="app.js"></script>
+
+  <!-- Notification background system -->
+  <script>
+    if ("serviceWorker" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.serviceWorker.register("./sw.js")
+          .then(() => {
+            console.log("ImagineIt notification system ready");
+          })
+          .catch((error) => {
+            console.error("Service worker registration failed:", error);
+          });
+      });
+    }
+  </script>
+
+</body>
+</html>

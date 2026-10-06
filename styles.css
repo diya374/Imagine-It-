@@ -1,0 +1,166 @@
+*{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,sans-serif;background:#faf7f8;color:#2c2227}.layout{display:flex;min-height:100vh}aside{width:250px;background:#2b2026;color:#fff;padding:25px;position:fixed;height:100vh}.brand{font:27px Georgia,serif;line-height:1.05}.brand span{font-size:15px}.tag{font-size:11px;color:#cdbbc3;margin:8px 0 32px}.nav button,.logout{width:100%;border:0;background:transparent;color:#eadde2;text-align:left;padding:12px;border-radius:10px;margin:4px 0;cursor:pointer}.nav button.active,.nav button:hover{background:#8f6274;color:#fff}.logout{position:absolute;bottom:20px}.layout>main{margin-left:250px;padding:30px;max-width:1500px;width:100%}header{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px}.title{font:31px Georgia,serif}.sub{font-size:13px;color:#817279}.hero{background:linear-gradient(135deg,#3a2730,#906376);color:white;border-radius:18px;padding:27px;margin-bottom:20px}.hero h1{font:32px Georgia,serif;margin:0 0 5px}.hero p{margin:0;color:#eadde2}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:20px}.card,.panel{background:white;border:1px solid #eee1e6;border-radius:16px;padding:19px;box-shadow:0 5px 18px #3b1d2608}.card small{color:#796d73}.card b{display:block;font-size:29px;margin-top:7px}.panel{margin-bottom:20px}.panel h2{font:21px Georgia,serif;margin:0 0 15px}.btn{border:0;background:#8f6274;color:white;border-radius:10px;padding:10px 14px;cursor:pointer}.btn.secondary{background:#eee5e9;color:#4c3941}.btn.sm{padding:7px 9px;font-size:12px}.toolbar{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}.input,.select{border:1px solid #dccdd3;background:white;border-radius:10px;padding:10px 12px;width:100%;outline:none}.toolbar .input,.toolbar .select{width:auto}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.formgrid label{font-size:12px;color:#766970}.formgrid .input,.formgrid .select{display:block;margin-top:5px}.full{grid-column:1/-1}.actions{display:flex;justify-content:flex-end;gap:8px;margin-top:15px}.notice,.alert{background:#f7eef2;color:#654452;padding:12px;border-radius:10px;font-size:13px;margin:12px 0}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;min-width:760px}th,td{padding:12px 10px;border-bottom:1px solid #f0e7eb;text-align:left;font-size:13px}th{font-size:11px;color:#796a72;text-transform:uppercase}.pill{padding:5px 8px;border-radius:999px;font-size:11px;font-weight:700}.active{background:#e4f5ea;color:#286640}.due-today{background:#f5e4ee;color:#814d68}.overdue{background:#f8dfe3;color:#9a2f43}.returned{background:#e8e6ef;color:#5c566d}.empty{text-align:center;padding:35px;color:#8a7d83}.login{min-height:100vh;display:grid;place-items:center;padding:20px;background:#faf7f8}.login-card{background:#fff;border:1px solid #eee1e6;border-radius:20px;padding:30px;width:min(430px,100%);box-shadow:0 15px 50px #3b1d2612}.logo{font:30px Georgia,serif;margin-bottom:25px}.logo span{font-size:15px}.login-card h1{font:25px Georgia,serif}.login-card .input{margin:7px 0}.wide{width:100%;margin-top:10px}.error{padding:30px;color:#a63d50}.modalback{position:fixed;inset:0;background:#24151c88;display:flex;align-items:center;justify-content:center;padding:20px;z-index:20}.modal{background:#fff;width:min(650px,100%);border-radius:18px;padding:24px;max-height:90vh;overflow:auto}.message{white-space:pre-wrap;background:#faf7f8;padding:15px;border-radius:12px;line-height:1.55;font-size:13px}.calendar{display:grid;grid-template-columns:repeat(7,1fr);gap:7px}.day{min-height:110px;border:1px solid #eee1e6;border-radius:10px;padding:8px;background:#fff}.booking{font-size:10px;background:#f5e4ee;color:#70445a;border-radius:5px;padding:4px;margin-top:5px;overflow:hidden;white-space:nowrap}@media(max-width:850px){aside{display:none}.layout>main{margin:0;padding:18px}.grid4{grid-template-columns:1fr 1fr}.formgrid{grid-template-columns:1fr}.full{grid-column:auto}.calendar{grid-template-columns:repeat(2,1fr)}header{gap:10px}.title{font-size:25px}}.calendar-header{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:15px;
+  margin-bottom:20px;
+}
+
+.calendar-title{
+  text-align:center;
+}
+
+.calendar-title h2{
+  margin:0;
+  font:24px Georgia,serif;
+}
+
+.calendar-title small{
+  display:block;
+  color:#8a7d83;
+  margin-top:4px;
+}
+
+.calendar-nav{
+  width:42px;
+  height:42px;
+  border:0;
+  border-radius:10px;
+  background:#8f6274;
+  color:white;
+  cursor:pointer;
+  font-size:16px;
+}
+
+.calendar-nav:hover{
+  opacity:.85;
+}
+
+.calendar-weekdays{
+  display:grid;
+  grid-template-columns:repeat(7,1fr);
+  gap:7px;
+  margin-bottom:7px;
+}
+
+.calendar-weekdays div{
+  text-align:center;
+  font-size:11px;
+  font-weight:700;
+  color:#796a72;
+  text-transform:uppercase;
+  padding:8px;
+}
+
+.day{
+  min-height:125px;
+  border:1px solid #eee1e6;
+  border-radius:10px;
+  padding:8px;
+  background:#fff;
+}
+
+.empty-day{
+  background:#faf7f8;
+  border-color:transparent;
+}
+
+.day-number{
+  font-weight:700;
+  font-size:13px;
+  margin-bottom:6px;
+}
+
+.today-day{
+  border:2px solid #8f6274;
+  background:#fff9fb;
+}
+
+.today-label{
+  font-size:8px;
+  margin-left:4px;
+  color:#8f6274;
+}
+
+.booking{
+  background:#f5e4ee;
+  color:#70445a;
+  border-radius:7px;
+  padding:6px;
+  margin-top:5px;
+  font-size:10px;
+  overflow:hidden;
+}
+
+.booking b{
+  display:block;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.booking small{
+  display:block;
+  margin-top:2px;
+  opacity:.8;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.available{
+  margin-top:8px;
+  font-size:9px;
+  color:#8a7d83;
+  padding:4px;
+}
+
+.calendar-legend{
+  display:flex;
+  gap:20px;
+  flex-wrap:wrap;
+  margin-top:18px;
+  font-size:11px;
+  color:#766970;
+}
+
+.calendar-legend span{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.legend-dot{
+  width:9px;
+  height:9px;
+  border-radius:50%;
+  display:inline-block;
+}
+
+.available-dot{
+  background:#d8e8dc;
+}
+
+.booked-dot{
+  background:#d99bb8;
+}
+
+.today-dot{
+  background:#8f6274;
+}
+
+@media(max-width:850px){
+
+  .calendar{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .calendar-weekdays{
+    display:none;
+  }
+
+  .day{
+    min-height:110px;
+  }
+
+}
